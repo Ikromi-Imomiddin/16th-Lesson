@@ -1,0 +1,17 @@
+using Domain;
+
+using Domain.Wrapper;
+
+namespace Infrastructura.Services;
+
+public interface IQuoteServices
+{
+    Task<List<Quote>> GetQuotes();
+    Task<List<QuoteCategoryDto>> GetQuotesWithCategoryName(int CategoryId);
+    Task<string> AddQuote(Quote quote);
+    Task<string> DeleteQuote(int id);
+    Task<string> UpdateQuote(Quote quote);
+    Task<List<Quote>> GetAllQuotesByCategory(int id);
+    Task<string> GetRandom(int id);
+
+}
